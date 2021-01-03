@@ -22,7 +22,7 @@ MyHeader("Page admin vente de GBC");
             <label for="dateFin">Date de fin : </label>
             <input type="date" id="dateFin" name="dateFin" required>
         </div>
-        <input type="submit">
+        <input type="submit" class="btn btn-outline-primary">
     </form>
 </div>
 

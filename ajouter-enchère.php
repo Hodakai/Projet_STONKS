@@ -17,7 +17,9 @@ MyHeader("Création d'enchères");
         <label for="nomLot">Nom du lot où se trouve l'enchère que vous voulez créer : </label>
         <input type="text" id="nomLot" name="nomLot" required>
     </div>
+    <div class="form-group">
     <textarea class="form-control" rows="5" name="Description" id="Description"></textarea>
+    </div>
     <div class="form-group">
         <label for="nomEnchere">Nom de l'enchère : </label>
         <input type="text" id="nomEnchere" name="nomEnchere" required>
@@ -42,5 +44,5 @@ MyHeader("Création d'enchères");
         <label for="Photo3">URL Photo n°3 (pas obligatoire) de l'objet mis aux enchères : </label>
         <input type="text" id="Photo3" name="Photo3">
     </div>
-    <input type="submit" class="Bouton">
+    <input type="submit" class="btn btn-outline-primary">
 </form>

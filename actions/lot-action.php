@@ -1,21 +1,22 @@
 <?php
 
-$nomVente = filter_input(INPUT_POST, nomVente);
-$nomLot = filter_input(INPUT_POST,nomLot);
+$nomVente = filter_input(INPUT_POST, "nomVente");
+$nomLot = filter_input(INPUT_POST,"nomLot");
+
+var_dump($nomLot);
+var_dump($nomVente);
 
 require_once "../Config.php";
+
 $pdo = new PDO("mysql:host=".Config::SERVEUR. ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo -> prepare("INSERT INTO lot (Nom, id_vente) VALUES (':Nom', (SELECT id FROM vente v WHERE v.nomVente = ':NomVente'))");
+$requete = $pdo -> prepare("insert into lot (Nom, id_vente) values (':Nom', (select id from vente where vente.nomVente = ':NomVente'))");
 
 $requete->bindParam(":Nom", $nomLot);
 $requete->bindParam(":NomVente", $nomVente);
 
 $requete->execute();
 
-header("location:../ajouter-lot.php");
+var_dump($requete);
 
-/*INSERT INTO lot (Nom)
-SELECT 'YEET'
-FROM vente
-WHERE vente.nomVente = 'Miam';*/
+//header("location:../ajouter-enchère.php");

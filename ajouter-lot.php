@@ -16,12 +16,9 @@ MyHeader("Page admin vente de GBC");
         <label for="nomLot">Nom du lot : </label>
         <input type="text" id="nomLot" name="nomLot" required>
     </div>
-    <input type="submit" class="btn-primary">
+    <input type="submit" class="btn btn-outline-primary">
 </form>
 
 <?php
 MyFooter();
 ?>
-
-</body>
-</html>

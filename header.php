@@ -43,18 +43,12 @@ function MyHeader($titre)
                         <a class="nav-link" href="ajouter-vente.php">Création de ventes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ajouter-lot.php">Création de lots</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ajouter-enchère.php">Création d'enchères</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Administrateurs</a>
+                        <a class="nav-link" href="Affichage-ventes.php">Voir toutes les ventes</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" method="post" action="recherche.php">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher une vente" aria-label="Search" name="VenteRecherche">
+                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
             </div>
         </div>
