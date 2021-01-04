@@ -21,13 +21,11 @@ $requete->execute();
 
 $lignes = $requete->fetchAll();
 
-/*if (count($lignes) != 1) {
+if (count($lignes) != 1) {
     http_response_code(404);
     echo("Pas d'article pour cet id");
     die;
-}*/
-
-$vente = $lignes;
+}
 
 ?>
 
