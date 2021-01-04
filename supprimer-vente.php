@@ -31,11 +31,11 @@ $vente = $lignes;
 
 ?>
 
-    <h1>Supprimer l'article :</h1>
+    <h1>Supprimer la vente :</h1>
     <form action="actions/supprimer-vente-action.php" method="post">
         <input type="hidden" value="<?php echo $token ?>" name="token">
         <input type="hidden" value="<?php echo $id ?>" name="id">
-        <h4>Etes-vous sûr de vouloir supprimer cet article ?</h4>
+        <h4>Etes-vous sûr de vouloir supprimer cette vente ?</h4>
         <input type="submit" class="btn btn-danger">
     </form>
 
