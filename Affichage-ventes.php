@@ -20,13 +20,13 @@ $requete = $pdo -> prepare("select id, nomVente, dateDebut, dateFin from vente")
 $requete -> execute();
 
 $lignes = $requete->fetchAll();
+
 ?>
 
 <div class="row">
     <?php
     for ($i = 0; $i < count($lignes); $i++) {
         ?>
-
         <div class="col-3">
             <div class="card">
                 <div class="card-body">
@@ -39,7 +39,6 @@ $lignes = $requete->fetchAll();
                 </div>
             </div>
         </div>
-
         <?php
     }
 
