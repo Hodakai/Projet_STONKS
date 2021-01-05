@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+}
+
+.Barre {
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: left;
+    width:  100%;
+    height: 85px;
+    top: 0;
+    background: #626263;
+}
+.Barre p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+    color: #e77d14;
+    text-shadow: 0 0 10px #e77d14,
+    0 0 20px #e77d14;
+    animation: animate 2s linear infinite ;
+}
+@keyframes animate {
+    0% {
+
+        color: #e77d14;
+    }
+    18% {
+        color: #e77d14;
+        text-shadow: 0 0 20px #e77d14;
+    }
+    20% {
+        color: #e77d14;
+        text-shadow: 0 0 50px #e77d14;
+    }
+
+    60% {
+        color: #e77d14;
+        text-shadow: 0 0 50px #e77d14;
+    }
+    70% {
+        color: #e77d14;
+        text-shadow: 0 0 20px #e77d14;
+    }
+    80% {
+        color: #e77d14;
+        text-shadow: 0 0 10px #e77d14;
+    }
+    100% {
+        color: #e77d14;
+    }
+}
+
+.panneauLogin{
+    display: block;
+    transform: translateY(200px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(145deg,#e77d14 ,#616163);
+    border-radius: 10px;
+}

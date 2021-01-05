@@ -39,5 +39,5 @@ mon_footer();
         <div class="VT">
             <p>Ventes terminées</p>
         </div></div>
-</body>
+    </body>
 </html>

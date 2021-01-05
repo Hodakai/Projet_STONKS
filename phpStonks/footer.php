@@ -1,5 +1,6 @@
 <?php
-function mon_footer(){
+function mon_footer($login)
+{
 
 ?>
 
@@ -11,7 +12,7 @@ function mon_footer(){
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="../cssStonks/footer.css" type="text/css">
-        <title>footer</title>
+        <title><?php echo $login ?></title>
     </head>
     <body>
     </body>

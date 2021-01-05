@@ -1,5 +1,6 @@
 <?php
-function mon_header($tittle){
+function mon_header($tittle)
+{
 
     ?>
 
@@ -19,7 +20,7 @@ function mon_header($tittle){
         <div class="barreNav">
             <a class="btnBGC" href="../MainStonks/Accueil.php"><i class="fas fa-coin fa-4x"></i></a>
             <h1>BGC</h1>
-            <h3>Accueil</h3>
+            <h3><?php echo $tittle?></h3>
             <div id="toggle"><i class="fas fa-align-justify fa-2x"></i></div>
             <nav>
                 <ul>
