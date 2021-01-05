@@ -31,7 +31,7 @@ MyHeader("Détail de la vente");
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Nom : <?php echo htmlspecialchars($lignes[$i]["Nom"])?></h5>
-                    <a href="détail-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>" class="btn btn-sm btn-primary">Voir les enchères du lot...</a>
+                    <a href="affichage-lots.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-primary">Voir les enchères du lot...</a>
                     <a href="modifier-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>" class="btn btn-sm btn-warning">Modifier</a>
                     <a href="supprimer-lot.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer</a>
                 </div>

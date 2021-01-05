@@ -14,4 +14,4 @@ $requete->bindParam(":id_vente", $id_vente);
 
 $requete->execute();
 
-header("location:../détail-vente.php?id=$id_vente");
+header("location:../affichage-lots.php?id=$id_vente");

@@ -33,7 +33,7 @@ $lignes = $requete->fetchAll();
                     <h5 class="card-title">Nom : <?php echo htmlspecialchars($lignes[$i]["nomVente"])?></h5>
                     <p class="card-text">Date de début : <?php echo htmlspecialchars($lignes[$i]["dateDebut"])?></p>
                     <p class="card-text">Date de fin : <?php echo htmlspecialchars($lignes[$i]["dateFin"])?></p>
-                    <a href="détail-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>" class="btn btn-sm btn-primary">Voir les lots de la vente...</a>
+                    <a href="affichage-lots.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-primary">Voir les lots de la vente...</a>
                     <a href="modifier-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>" class="btn btn-sm btn-warning">Modifier</a>
                     <a href="supprimer-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer</a>
                 </div>
