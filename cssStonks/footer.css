@@ -2,7 +2,7 @@
 footer .footer {
     display: block;
     position: fixed;
-    width: 510px;
+    width: 100%;
     height: 85px;
     background: #616163;
     top: 92%;
@@ -16,15 +16,13 @@ footer span {
     color: #e77d14;
     text-shadow: 0 0 10px #e77d14,
     0 0 20px #e77d14;
-    transform: translateY(5px) translateX(-40px);
+    top: 10%
 }
 
 @media (min-width: 500px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 610px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -37,15 +35,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px) translateX(-30px);
     }
 }
 @media (min-width: 600px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 710px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -58,15 +53,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px) translateX(-25px);
     }
 }
 @media (min-width: 700px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 810px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -79,15 +71,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px) translateX(-20px);
     }
 }
 @media (min-width: 800px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 910px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -100,15 +89,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px) translateX(-10px);
     }
 }
 @media (min-width: 900px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 1010px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -121,15 +107,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px);
     }
 }
 @media (min-width: 1000px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 1310px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -142,15 +125,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px);
     }
 }
 @media (min-width: 1250px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 1480px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -163,15 +143,12 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px);
     }
 }
 @media (min-width: 1450px) {
     footer .footer {
         display: block;
         position: fixed;
-        width: 1980px;
-        height: 85px;
         background: #616163;
         top: 92%;
         z-index: 3;
@@ -184,7 +161,6 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px) translateX(-200px);
     }
 }
 
@@ -195,8 +171,6 @@ footer span {
     footer .footer {
         display: block;
         position: fixed;
-        width: 1920px;
-        height: 75px;
         background: #616163;
         top: 95%;
         z-index: 3;
@@ -208,6 +182,5 @@ footer span {
         color: #e77d14;
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
-        transform: translateY(5px);
     }
 }
