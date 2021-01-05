@@ -1,19 +1,33 @@
 <?php
 
-$nomVente = filter_input(INPUT_POST, nomVente);
-$nomLot = filter_input(INPUT_POST, nomLot);
-$nomEnchere = filter_input(INPUT_POST, nomEnchere);
-$Description = filter_input(INPUT_POST, Description);
-$prixDepart = filter_input(INPUT_POST, prixDepart);
-$prixReserve = filter_input(INPUT_POST, prixReserve);
-$Photo1 = filter_input(INPUT_POST, Photo1);
-$Photo2 = filter_input(INPUT_POST, Photo2);
-$Photo3 = filter_input(INPUT_POST, Photo3);
+$idLot = filter_input(INPUT_POST, "id");
+$nomEnchere = filter_input(INPUT_POST, "nomEnchere");
+$Description = filter_input(INPUT_POST, "Description");
+$prixDepart = filter_input(INPUT_POST, "prixDepart");
+$prixReserve = filter_input(INPUT_POST, "prixReserve");
+$vendeur = filter_input(INPUT_POST, "vendeur");
+$Photo1 = filter_input(INPUT_POST, "Photo1");
+$Photo2 = filter_input(INPUT_POST, "Photo2");
+$Photo3 = filter_input(INPUT_POST, "Photo3");
 
 require_once "../Config.php";
 
-$pdo = new PDO("mysql:host=".Config::SERVEUR. ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
+$pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo -> prepare("");
+$requete = $pdo->prepare("insert into objet (lot, NomObjet, Description, prixDepart, prixReserve, vendeur, Photo1, Photo2, Photo3) values (:lot,:nomObjet, :description, :prixDepart, :prixReserve, :vendeur, :Photo1, :Photo2, :Photo3)");
 
-/*INSERT INTO objet (NomObjet, lot, Description, prixDepart, prixReserve, Photo1) VALUES ('Carte Charizard', (SELECT id FROM lot l WHERE l.Nom = 'YEET'), 'Carte très rare', '20', '40', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwRl3jJ_3dIdGvvcz8FtEVZDiRaFaQS8a3PQ&usqp=CAU')*/
+$requete->bindParam(":lot", $idLot);
+$requete->bindParam(":nomObjet", $nomEnchere);
+$requete->bindParam(":description", $Description);
+$requete->bindParam(":prixDepart", $prixDepart);
+$requete->bindParam(":prixReserve", $prixReserve);
+$requete->bindParam(":vendeur", $vendeur);
+$requete->bindParam(":Photo1", $Photo1);
+$requete->bindParam(":Photo2", $Photo2);
+$requete->bindParam(":Photo3", $Photo3);
+
+$requete->execute();
+
+//$requete->debugDumpParams();
+
+header("location:../affichage_encheres.php?id=$idLot");

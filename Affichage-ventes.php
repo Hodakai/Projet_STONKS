@@ -13,6 +13,7 @@ MyHeader("Toutes les ventes");
 <?php
 
 require_once "Config.php";
+
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
 $requete = $pdo -> prepare("select id, nomVente, dateDebut, dateFin from vente");

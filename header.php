@@ -45,6 +45,9 @@ function MyHeader($titre)
                     <li class="nav-item">
                         <a class="nav-link" href="Affichage-ventes.php">Voir toutes les ventes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ajout-admin.php">Ajouter un admin</a>
+                    </li>
                 </ul>
                 <form class="d-flex" method="post" action="recherche.php">
                     <input class="form-control me-2" type="search" placeholder="Rechercher une vente" aria-label="Search" name="VenteRecherche">
