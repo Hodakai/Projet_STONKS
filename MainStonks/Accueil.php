@@ -2,7 +2,7 @@
 require_once "../phpStonks/headerAccueil.php";
 require_once "../phpStonks/footer.php";
 mon_header("Accueil");
-mon_footer();
+mon_footer("Accueil");
 ?>
 
 
