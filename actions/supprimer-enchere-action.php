@@ -15,11 +15,11 @@ require_once "../Config.php";
 
 $pdo = new PDO("mysql:host=".Config::SERVEUR.";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo->prepare("delete from vente where id=:id");
+$requete = $pdo->prepare("delete from objet where id=:id");
 
 $requete->bindParam(":id", $id);
 
 $requete->execute();
 
 
-header("location:/Projet_STONKS/Affichages/Affichage-ventes.php");
+header("location:/Projet_STONKS/Affichages/affichage_encheres.php?id=$id");

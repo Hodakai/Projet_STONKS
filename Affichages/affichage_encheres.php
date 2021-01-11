@@ -1,11 +1,11 @@
 <?php
 
-require_once "header.php";
-require_once "footer.php";
+require_once "../header.php";
+require_once "../footer.php";
 
 $id = filter_input(INPUT_GET, "id");
 
-require_once "Config.php";
+require_once "../Config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
 $requete = $pdo->prepare("select id, NomObjet, vendeur, Photo1 from objet where lot=:id");
@@ -33,11 +33,11 @@ MyHeader("Création d'enchères");
                 <div class="card-body">
                     <h5 class="card-title">Nom : <?php echo htmlspecialchars($lignes[$i]["NomObjet"]) ?></h5>
                     <p class="card-text">Vendeur : <?php echo htmlspecialchars($lignes[$i]["vendeur"]) ?></p>
-                    <a href="détail-enchère.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="/Projet_STONKS/Affichages/détail-enchère.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>"
                        class="btn btn-sm btn-primary">Voir l'enchère...</a>
-                    <a href="modifier-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="/Projet_STONKS/Modifier/modifier-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
                        class="btn btn-sm btn-warning">Modifier</a>
-                    <a href="supprimer-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="/Projet_STONKS/Supprimer/supprimer-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
                        class="btn btn-sm btn-danger">Supprimer</a>
                 </div>
             </div>
@@ -48,7 +48,7 @@ MyHeader("Création d'enchères");
 </div>
     <div class="CreationEncheres">
         <h1>Ajouter une enchère à un lot</h1>
-    <form action="actions/enchère-action.php" method="post" class="form-enchere">
+    <form action="../actions/enchère-action.php" method="post" class="form-enchere">
         <input type="hidden" value="<?php echo $id?>" name="id">
         <div class="form-group">
             <label for="nomEnchere">Nom de l'enchère : </label>

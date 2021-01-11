@@ -1,7 +1,7 @@
 <?php
 
-require_once "header.php";
-require_once "footer.php";
+require_once "../header.php";
+require_once "../footer.php";
 
 MyHeader("Toutes les ventes");
 
@@ -12,7 +12,7 @@ MyHeader("Toutes les ventes");
 
 <?php
 
-require_once "Config.php";
+require_once "../Config.php";
 
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
@@ -35,8 +35,8 @@ $lignes = $requete->fetchAll();
                     <p class="card-text">Date de début : <?php echo htmlspecialchars($lignes[$i]["dateDebut"])?></p>
                     <p class="card-text">Date de fin : <?php echo htmlspecialchars($lignes[$i]["dateFin"])?></p>
                     <a href="affichage-lots.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-primary">Voir les lots de la vente...</a>
-                    <a href="modifier-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>" class="btn btn-sm btn-warning">Modifier</a>
-                    <a href="supprimer-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer</a>
+                    <a href="../Modifier/modifier-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-warning">Modifier</a>
+                    <a href="../Supprimer/supprimer-vente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer</a>
                 </div>
             </div>
         </div>

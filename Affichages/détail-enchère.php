@@ -1,10 +1,10 @@
 <?php
-require_once "header.php";
-require_once "footer.php";
+require_once "../header.php";
+require_once "../footer.php";
 
 $id=filter_input(INPUT_GET, "id");
 
-require_once "Config.php";
+require_once "../Config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
 $requete = $pdo->prepare("select id, NomObjet, Description, prixDepart, prixReserve, vendeur, Photo1, Photo2, Photo3 from objet where id=:id");

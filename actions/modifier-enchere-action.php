@@ -1,7 +1,7 @@
 <?php
 
-$idLot = filter_input(INPUT_POST, "id");
-$nomEnchere = filter_input(INPUT_POST, "nomEnchere");
+$id = filter_input(INPUT_POST, "id");
+$NomObjet = filter_input(INPUT_POST, "NomObjet");
 $Description = filter_input(INPUT_POST, "Description");
 $prixDepart = filter_input(INPUT_POST, "prixDepart");
 $prixReserve = filter_input(INPUT_POST, "prixReserve");
@@ -11,14 +11,13 @@ $Photo2 = filter_input(INPUT_POST, "Photo2");
 $Photo3 = filter_input(INPUT_POST, "Photo3");
 
 require_once "../Config.php";
-
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo->prepare("insert into objet (lot, NomObjet, Description, prixDepart, prixReserve, vendeur, Photo1, Photo2, Photo3) values (:lot,:nomObjet, :description, :prixDepart, :prixReserve, :vendeur, :Photo1, :Photo2, :Photo3)");
+$requete = $pdo->prepare("update objet set NomObjet = :NomObjet, Description = :Description, prixDepart = :prixDepart, prixReserve = :prixReserve, vendeur = :vendeur, Photo1 = :Photo1, Photo2 = :Photo2, Photo3 = :Photo3 where id=:id");
 
-$requete->bindParam(":lot", $idLot);
-$requete->bindParam(":nomObjet", $nomEnchere);
-$requete->bindParam(":description", $Description);
+$requete->bindParam(":id", $id);
+$requete->bindParam(":NomObjet", $NomObjet);
+$requete->bindParam(":Description", $Description);
 $requete->bindParam(":prixDepart", $prixDepart);
 $requete->bindParam(":prixReserve", $prixReserve);
 $requete->bindParam(":vendeur", $vendeur);
@@ -28,6 +27,4 @@ $requete->bindParam(":Photo3", $Photo3);
 
 $requete->execute();
 
-//$requete->debugDumpParams();
-
-header("location:/Projet_STONKS/Affichages/affichage_encheres.php?id=$idLot");
+header("location:/Projet_STONKS/Affichages/affichage_encheres.php?id=$id");
