@@ -22,4 +22,4 @@ $requete->bindParam(":id", $id);
 $requete->execute();
 
 
-header("location:/Projet_STONKS/Affichages/affichage_encheres.php?id=$id");
+header("location:/Projet_STONKS/Affichages/Affichage-ventes.php");
