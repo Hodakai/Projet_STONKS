@@ -59,11 +59,11 @@ MyHeader("Création d'enchères");
         </div>
         <div class="form-group">
             <label for="prixDepart">Mise à prix : </label>
-            <input type="number" id="prixDepart" name="prixDepart" required>
+            <input type="number" id="prixDepart" name="prixDepart" placeholder="€€€" required>
         </div>
         <div class="form-group">
             <label for="prixReserve">Prix de reserve : </label>
-            <input type="number" id="prixReserve" name="prixReserve" required>
+            <input type="number" id="prixReserve" name="prixReserve" placeholder="€€€" required>
         </div>
         <div class="form-group">
             <label for="vendeur">Vendeur : </label>
