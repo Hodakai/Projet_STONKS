@@ -1,0 +1,76 @@
+
+body {
+    position: relative;
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+}
+
+body .all{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+body .TxtIntro {
+    text-align: center;
+    width: 300px;
+    height: 175px;
+    background: linear-gradient(145deg,#e77d14 ,#616163);
+    position: relative;
+    border-radius: 10px;
+}
+body .TxtIntro p {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+
+
+body .VeC {
+    text-align: center;
+    width: 300px;
+    height: 75px;
+    background: #606063;
+    position: relative;
+    border-radius: 10px;
+}
+
+body .VeC p{
+    padding: 25px;
+    color: white;
+    margin: 20px;
+}
+
+body .VaV {
+    text-align: center;
+    width: 300px;
+    height: 75px;
+    position: relative;
+    background: #616163;
+    border-radius: 10px;
+}
+
+body .VaV p{
+    padding: 25px;
+    color: white;
+    margin: 20px;
+}
+
+body .VT {
+    text-align: center;
+    width: 300px;
+    height: 75px;
+    position: relative;
+    background: #616163;
+    border-radius: 10px;
+}
+
+body .VT p{
+    padding: 25px;
+    color: white;
+    margin: 20px;
+}
