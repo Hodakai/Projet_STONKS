@@ -55,7 +55,7 @@ MyHeader("Création d'enchères");
             <input type="text" id="nomEnchere" name="nomEnchere" required>
         </div>
         <div class="form-group">
-            <textarea class="form-control" rows="5" placeholder="Description" name="Description" id="Description"></textarea>
+            <textarea class="form-control" rows="5" placeholder="Description de l'objet mis aux enchères" name="Description" id="Description"></textarea>
         </div>
         <div class="form-group">
             <label for="prixDepart">Mise à prix : </label>
