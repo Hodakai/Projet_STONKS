@@ -3,6 +3,6 @@
     {
         const USERNAME="PHPStonks";
         const MOTDEPASSE="stonks";
-        const SERVEUR="phpStonks";
+        const SERVEUR="localhost";
     }
 ?>
