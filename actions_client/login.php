@@ -29,7 +29,6 @@ if (count($lignes) == 1){
     }
 }
 
-header("location:../MainStonks/Affichage_Login.php");
 
 
 

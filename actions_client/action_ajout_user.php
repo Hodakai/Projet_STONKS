@@ -18,7 +18,6 @@ if (count($lignes) == 1){
     $check=$lignes["Username"];
     if ($check == $Username1){
 
-        sleep(2);
     }
     else  {
         header("location:../MainStonks/Affichage_Login.php");

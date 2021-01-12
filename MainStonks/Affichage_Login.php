@@ -23,9 +23,9 @@ mon_footer("Login");
 <body>
     <h1>Veuillez vous connecter</h1>
 <div class="panneauLogin">
-    <form action="../actions/login.php" method="post">
+    <form action="../actions_client/login.php" method="post">
         <div class="form-group">
-        <label for="user"> Entrez votre Nom d'utilisateur</label>
+        <label for="user">Entrez votre Nom d'utilisateur</label>
     <input  alt="Username" name="Username" id="user" type="text" required>
         </div>
         <br>
@@ -36,6 +36,7 @@ mon_footer("Login");
         <br><br>
         <input type="submit" class="btn btn-outline-primary">
 
+        <a href="../MainStonks/Register.php" class="btn btn-sm btn-primary">Creer un compte</a>
 
     </form>
 </div>

@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.presentationVentes {
+    display: flex;
+    transform: translateY(100px);
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    background: linear-gradient(145deg, #e77d14, #616163);
+    border-radius: 10px;
+}
+
+.uneVente {
+    margin: 25px;
+    min-width: content-box;
+    height: content-box;
+    background: #616163;
+}
+
+.ParticipationEnchere{
+
+}
+
