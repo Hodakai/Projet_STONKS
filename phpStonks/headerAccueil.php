@@ -24,7 +24,7 @@ function mon_header($tittle)
             <div id="toggle"><i class="fas fa-align-justify fa-2x"></i></div>
             <nav>
                 <ul>
-                    <li><a href="#">Ventes en cours</a></li>
+                    <li><a href="../MainStonks/VentesEnCoursUser.php">Ventes en cours</a></li>
                     <li><a href="#">Ventes à venir</a></li>
                     <li><a href="#">Ventes terminées</a></li>
                 </ul>
