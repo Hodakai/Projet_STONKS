@@ -16,7 +16,7 @@ $requete->bindParam(":nomVente", $nomVente);
 
 $requete->execute();
 
-header("location:/Projet_STONKS/Affichage/Affichage-ventes.php");
+header("location:/Projet_STONKS/Affichages/Affichage-ventes.php");
 
 
 

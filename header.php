@@ -37,7 +37,7 @@ function MyHeader($titre)
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.php">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="/Projet_STONKS/index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Projet_STONKS/Ajouts/ajouter-vente.php">Création de ventes</a>
