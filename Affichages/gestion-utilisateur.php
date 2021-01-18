@@ -48,3 +48,6 @@ $lignes = $requete->fetchAll();
 
     ?>
 </div>
+
+<?php
+MyFooter();
