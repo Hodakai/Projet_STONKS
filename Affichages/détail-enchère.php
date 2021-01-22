@@ -1,6 +1,6 @@
 <?php
-require_once "../header.php";
-require_once "../footer.php";
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 $id=filter_input(INPUT_GET, "id");
 
@@ -34,5 +34,5 @@ MyHeader(htmlspecialchars($enchere["NomObjet"]));
     <p>Vendu par : <?php echo htmlspecialchars($enchere["vendeur"])?></p>
 
 <?php
-MyFooter();
+mon_footer("admin");
 ?>

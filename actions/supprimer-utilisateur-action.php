@@ -22,4 +22,4 @@ $requete->bindParam(":id", $id);
 
 $requete->execute();
 
-header("location:/Projet_STONKS/Affichages/gestion-utilisateur.php");
+header("location:../Affichages/gestion-utilisateur.php");

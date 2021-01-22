@@ -1,6 +1,11 @@
 <?php
 require_once "../phpStonks/footer.php";
 mon_footer("Login");
+session_start();
+
+$token = rand(0, 1000000);
+$_SESSION["token"] = $token;
+
 ?>
 
 <!doctype html>
@@ -23,8 +28,10 @@ mon_footer("Login");
 <body>
     <h1>Veuillez vous connecter</h1>
 <div class="panneauLogin">
-    <form action="../actions_client/login.php" method="post">
+
+    <form action="../actions/login.php" method="post">
         <div class="form-group">
+            <input type="hidden" value="<?php echo $token ?>" name="token">
         <label for="user">Entrez votre Nom d'utilisateur</label>
     <input  alt="Username" name="Username" id="user" type="text" required>
         </div>

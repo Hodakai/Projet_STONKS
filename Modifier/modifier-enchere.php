@@ -1,6 +1,6 @@
 <?php
-require_once "../header.php";
-require_once "../footer.php";
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 $id = filter_input(INPUT_GET, "id");
 
@@ -29,7 +29,7 @@ MyHeader("Modification de " . $enchere["NomObjet"]);
 
     <div class="modification_vente">
         <h1>Modifier le lot <?php echo $enchere["NomObjet"] ?> :</h1>
-        <form action="/Projet_STONKS/actions/modifier-enchere-action.php" method="post">
+        <form action="../actions/modifier-enchere-action.php" method="post">
             <div class="CreationEncheres">
                 <input type="hidden" value="<?php echo $id ?>" name="id">
                 <div class="form-group">
@@ -73,4 +73,4 @@ MyHeader("Modification de " . $enchere["NomObjet"]);
     </div>
 
 <?php
-MyFooter();
+mon_footer("admin");

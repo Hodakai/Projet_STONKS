@@ -4,6 +4,7 @@ $dateDebut = filter_input(INPUT_POST,"dateDebut");
 $dateFin = filter_input(INPUT_POST,"dateFin");
 $nomVente = filter_input(INPUT_POST,"nomVente");
 
+
 require_once "../Config.php";
 
 $pdo = new PDO("mysql:host=".Config::SERVEUR. ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
@@ -16,7 +17,7 @@ $requete->bindParam(":nomVente", $nomVente);
 
 $requete->execute();
 
-header("location:/Projet_STONKS/Affichages/Affichage-ventes.php");
+header("location:../Affichages/Affichage-ventes.php");
 
 
 

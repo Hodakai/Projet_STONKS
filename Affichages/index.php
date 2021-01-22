@@ -1,6 +1,6 @@
 <?php
 require_once "header.php";
-require_once "footer.php";
+require_once "../phpStonks/footer.php";
 
 MyHeader("Page d'accueil admin");
 ?>
@@ -18,5 +18,5 @@ MyHeader("Page d'accueil admin");
 </div>
 
 <?php
-MyFooter();
+mon_footer("admin");
 ?>

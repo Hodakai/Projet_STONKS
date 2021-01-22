@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once "../header.php";
-require_once "../footer.php";
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 MyHeader("Suppresion d'une enchère");
 
@@ -30,7 +30,7 @@ if (count($lignes) != 1) {
 ?>
 
     <h1>Supprimer l'enchere :</h1>
-    <form action="/Projet_STONKS/actions/supprimer-enchere-action.php" method="post">
+    <form action="../actions/supprimer-enchere-action.php" method="post">
         <input type="hidden" value="<?php echo $token ?>" name="token">
         <input type="hidden" value="<?php echo $id ?>" name="id">
         <h4>Etes-vous sûr de vouloir supprimer cette enchere ?</h4>
@@ -38,4 +38,4 @@ if (count($lignes) != 1) {
     </form>
 
 <?php
-MyFooter();
+mon_footer("supprimer");

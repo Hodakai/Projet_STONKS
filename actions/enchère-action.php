@@ -14,7 +14,7 @@ require_once "../Config.php";
 
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo->prepare("insert into objet (lot, NomObjet, Description, prixDepart, prixReserve, vendeur, Photo1, Photo2, Photo3) values (:lot,:nomObjet, :description, :prixDepart, :prixReserve, :vendeur, :Photo1, :Photo2, :Photo3)");
+$requete = $pdo->prepare("insert into objet (lot, NomObjet, Description, prixDepart, prixReserve, TopPrix, vendeur, Photo1, Photo2, Photo3) values (:lot,:nomObjet, :description, :prixDepart, :prixReserve, :prixDepart, :vendeur, :Photo1, :Photo2, :Photo3)");
 
 $requete->bindParam(":lot", $idLot);
 $requete->bindParam(":nomObjet", $nomEnchere);
@@ -30,4 +30,4 @@ $requete->execute();
 
 //$requete->debugDumpParams();
 
-header("location:/Projet_STONKS/Affichages/affichage_encheres.php?id=$idLot");
+header("location:../Affichages/affichage_encheres.php?id=$idLot");

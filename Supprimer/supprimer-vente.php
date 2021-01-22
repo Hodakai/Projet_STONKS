@@ -2,9 +2,9 @@
 
 session_start();
 
-require_once "../header.php";
-require_once "../footer.php";
-
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
+mon_footer("supprimer ventes");
 MyHeader("Suppresion d'une vente");
 
 $token = rand(0, 1000000);
@@ -38,4 +38,4 @@ if (count($lignes) != 1) {
     </form>
 
 <?php
-MyFooter();
+mon_footer("supprimer");

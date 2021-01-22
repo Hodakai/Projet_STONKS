@@ -19,11 +19,16 @@ body {
 
 .uneVente {
     margin: 25px;
-    min-width: content-box;
-    height: content-box;
+    max-width: 500px;
     background: #616163;
 }
 
-.barreIndic{
+.Photo {
+    margin: 5px;
+    max-width: 400px;
+}
+
+p {
+    color: white;
 }
 

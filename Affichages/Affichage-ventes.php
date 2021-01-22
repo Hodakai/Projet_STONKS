@@ -1,7 +1,7 @@
 <?php
 
-require_once "../header.php";
-require_once "../footer.php";
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 MyHeader("Toutes les ventes");
 
@@ -16,9 +16,9 @@ require_once "../Config.php";
 
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
 
-$requete = $pdo -> prepare("select id, nomVente, dateDebut, dateFin from vente");
+$requete = $pdo->prepare("select id, nomVente, dateDebut, dateFin from vente");
 
-$requete -> execute();
+$requete->execute();
 
 $lignes = $requete->fetchAll();
 
@@ -46,5 +46,5 @@ $lignes = $requete->fetchAll();
     ?>
 </div>
 <?php
-MyFooter();
+mon_footer("admin");
 ?>

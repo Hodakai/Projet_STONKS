@@ -31,13 +31,13 @@ mon_footer("Accueil");
                 pas de remboursement disponible.  /\ </span></p>
         </div>
         <div class="VeC">
-            <p>Ventes en cours </p>
+            <a href="../MainStonks/VentesEnCoursUser.php"><p>Ventes en Cours </p></a>
         </div>
         <div class="VaV">
-            <p>Ventes à venir </p>
+            <a href="../MainStonks/VenteAVenir.php"><p>Ventes à venir </p></a>
         </div>
         <div class="VT">
-            <p>Ventes terminées</p>
+            <a href="../MainStonks/VentePassee.php"><p>Ventes Passées </p></a>
         </div></div>
     </body>
 </html>

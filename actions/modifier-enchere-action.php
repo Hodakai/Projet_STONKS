@@ -27,4 +27,4 @@ $requete->bindParam(":Photo3", $Photo3);
 
 $requete->execute();
 
-header("location:/Projet_STONKS/Affichages/Affichage-ventes.php");
+header("location:../Affichages/Affichage-ventes.php");

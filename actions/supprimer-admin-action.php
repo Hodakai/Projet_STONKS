@@ -22,4 +22,4 @@ $requete->bindParam(":id", $id);
 
 $requete->execute();
 
-header("location:/Projet_STONKS/Ajouts/ajouter-admin.php");
+header("location:../Affichages/ajouter-admin.php");

@@ -1,26 +1,16 @@
 <?php
 require_once "../phpStonks/headerAccueil.php";
 require_once "../phpStonks/footer.php";
-mon_header("Lots Disponibles");
-mon_footer("Lots Disponibles");
+mon_header("Ventes Passées");
+mon_footer("Ventes Passées");
 
 require_once "../Config.php";
-$id=filter_input(INPUT_GET,"id");
-
-
-
 $pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
-$requetes = $pdo->prepare("select * from lot where id_vente=:id");
-$requetes->bindParam(":id",$id);
-
+$requetes = $pdo->prepare("select * from vente where etape=2");
 $requetes->execute();
 
-
 $lignes = $requetes->fetchall();
-
 ?>
-
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -29,7 +19,7 @@ $lignes = $requetes->fetchall();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../cssStonks/VentesEnCoursUser.css" type="text/css">
-    <title>Lots Disponibles</title>
+    <title>Ventes Passées</title>
 </head>
 
 
@@ -39,11 +29,14 @@ $lignes = $requetes->fetchall();
     for ($i = 0;
          $i < count($lignes);
          $i++){
+
         ?>
 
         <div class="uneVente">
-            <h4 class="nomVente">Nom du lot : <?php echo htmlspecialchars($lignes[$i]["Nom"]) ?></h4>
-            <a href="../MainStonks/AffichageObjetDansLot.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-primary">Voir Objets</a>
+            <h4 class="nomVente"><?php echo htmlspecialchars($lignes[$i]["nomVente"]) ?></h4>
+            <p class="nomVente">cette vente a démarré le <?php echo htmlspecialchars($lignes[$i]["dateDebut"]) ?></p>
+            <p class="nomVente">et a fini <?php echo htmlspecialchars($lignes[$i]["dateFin"]) ?></p>
+            <a href="../MainStonks/detailsvente.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-primary">détails</a>
         </div>
 
         <?php
@@ -51,5 +44,3 @@ $lignes = $requetes->fetchall();
 
     ?>
 </div>
-
-

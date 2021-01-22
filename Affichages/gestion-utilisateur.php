@@ -1,7 +1,7 @@
 <?php
 
-require_once '../header.php';
-require_once '../footer.php';
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 MyHeader("Gestion utilisateur");
 
@@ -38,7 +38,7 @@ $lignes = $requete->fetchAll();
                         <?php
                     }
                     ?>
-                    <a href="/Projet_STONKS/Supprimer/supprimer-utilisateur.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="../Supprimer/supprimer-utilisateur.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
                        class="btn btn-sm btn-danger">Supprimer</a>
                 </div>
             </div>
@@ -50,4 +50,4 @@ $lignes = $requete->fetchAll();
 </div>
 
 <?php
-MyFooter();
+mon_footer("admin");

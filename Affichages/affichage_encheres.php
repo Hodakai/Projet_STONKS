@@ -1,7 +1,7 @@
 <?php
 
-require_once "../header.php";
-require_once "../footer.php";
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 $id = filter_input(INPUT_GET, "id");
 
@@ -33,11 +33,11 @@ MyHeader("Création d'enchères");
                 <div class="card-body">
                     <h5 class="card-title">Nom : <?php echo htmlspecialchars($lignes[$i]["NomObjet"]) ?></h5>
                     <p class="card-text">Vendeur : <?php echo htmlspecialchars($lignes[$i]["vendeur"]) ?></p>
-                    <a href="/Projet_STONKS/Affichages/détail-enchère.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>"
+                    <a href="../Affichages/détail-enchère.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>"
                        class="btn btn-sm btn-primary">Voir l'enchère...</a>
-                    <a href="/Projet_STONKS/Modifier/modifier-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="../Modifier/modifier-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
                        class="btn btn-sm btn-warning">Modifier</a>
-                    <a href="/Projet_STONKS/Supprimer/supprimer-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
+                    <a href="../Supprimer/supprimer-enchere.php?id=<?php echo htmlspecialchars($lignes[$i]["id"]) ?>"
                        class="btn btn-sm btn-danger">Supprimer</a>
                 </div>
             </div>
@@ -86,4 +86,4 @@ MyHeader("Création d'enchères");
     </div>
 
     <?php
-    MyFooter();
+    mon_footer("admin");

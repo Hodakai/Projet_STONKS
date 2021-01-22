@@ -1,6 +1,6 @@
 <?php
-require_once '../header.php';
-require_once '../footer.php';
+require_once "../Affichages/header.php";
+require_once "../phpStonks/footer.php";
 
 MyHeader("Ajouter un admin");
 
@@ -25,8 +25,7 @@ $lignes = $requete->fetchAll();
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Nom : <?php echo htmlspecialchars($lignes[$i]["Username"])?></h5>
-                        <a href="/Projet_STONKS/Supprimer/supprimer-admin.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer le statut d'admin</a>
-                    </div>
+                        <a href="../Supprimer/supprimer-admin.php?id=<?php echo htmlspecialchars($lignes[$i]["id"])?>" class="btn btn-sm btn-danger">Supprimer le statut d'admin</a>
                 </div>
             </div>
             <?php
@@ -47,5 +46,5 @@ $lignes = $requete->fetchAll();
     </div>
 
 <?php
-MyFooter();
+mon_footer("admin");
 ?>
