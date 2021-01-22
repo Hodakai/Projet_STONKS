@@ -23,7 +23,7 @@ mon_footer("Register");
 <body>
 <h1>Veuillez enregistrer</h1>
 <div class="panneauLogin">
-    <form action="../actions_client/action_ajout_user.php" method="post">
+    <form action="../actions/action_ajout_user.php" method="post">
         <div class="form-group">
             <label for="user"> Entrez votre Nom d'utilisateur</label>
             <input  alt="username" name="Username" id="user" type="text" required>

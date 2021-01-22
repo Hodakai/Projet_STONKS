@@ -1,18 +1,25 @@
 <?php
 require_once "../phpStonks/headerAccueil.php";
 require_once "../phpStonks/footer.php";
-mon_header("participation a une enchère");
-mon_footer("participation a une enchère");
-
-require_once "../MainStonks/config.php";
+mon_header("participation");
+mon_footer("participation");
+session_start();
+require_once "../Config.php";
 $id = filter_input(INPUT_GET, "id");
 
-$pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::USERNAME, Config::MDP);
-$requetes = $pdo->prepare("select * from objet where lot=:id");
+$pdo = new PDO("mysql:host=" . Config::SERVEUR . ";dbname=phpstonks", Config::UTILISATEUR, Config::MDP);
+$requetes = $pdo->prepare("select * from objet where id=:id");
 $requetes->bindParam(":id", $id);
 $requetes->execute();
 
 $lignes = $requetes->fetchall();
+
+
+$i = 0;
+if ($i=0){
+    $_SESSION["ChoixUser"]=0;
+    $i++;
+}
 
 ?>
 
@@ -31,44 +38,52 @@ $lignes = $requetes->fetchall();
 
 <div class="presentationVentes">
 
-    <?php
-    for ($i = 0;
-         $i < count($lignes);
-         $i++) {
-        ?>
 
-        <div class="uneVente">
-            <img src="https://i.kym-cdn.com/entries/icons/original/000/029/959/Screen_Shot_2019-06-05_at_1.26.32_PM.jpg"
-                 class="nomVente">
-            <img class="nomVente"><?php echo htmlspecialchars($lignes[$i]["Photo2"]) ?>
-            <img class="nomVente"><?php echo htmlspecialchars($lignes[$i]["Photo3"]) ?>
-            <p class="nomVente"><?php echo htmlspecialchars($lignes[$i]["NomObjet"]) ?></p>
-            <p class="nomVente"><?php echo htmlspecialchars($lignes[$i]["vendeur"]) ?></p>
-            <p class="nomVente"><?php echo htmlspecialchars($lignes[$i]["prixDepart"]) ?></p>
-            <p class="nomVente"><?php echo htmlspecialchars($lignes[$i]["prixReserve"]) ?></p>
-            <p class="nomVente"><?php echo htmlspecialchars($lignes[$i]["Description"]) ?></p>
+    <div class="uneVente">
+        <img class="Photo" src="<?php echo htmlspecialchars($lignes[0]["Photo1"]) ?>">
+        <img class="Photo" src="<?php echo htmlspecialchars($lignes[0]["Photo2"]) ?>">
+        <img class="Photo" src="<?php echo htmlspecialchars($lignes[0]["Photo3"]) ?>">
+        <p class="nomVente">Nom de L'objet : <?php echo htmlspecialchars($lignes[0]["NomObjet"]) ?></p>
+        <p class="nomVente">Nom du Vendeur : <?php echo htmlspecialchars($lignes[0]["vendeur"]) ?></p>
+        <p class="nomVente">Description : <?php echo htmlspecialchars($lignes[0]["Description"]) ?></p>
 
-            <div class="ParticipationEnchere">
-                <form action="../actions_client/ActionParticipation.php" method="post">
-                    <div class="form-group">
-                        <label for="user">Entrez un prix</label>
-                        <input alt="ChoixUser" name="ChoixUser" id="user" type="number" required>
-                    </div>
-                    <br><br>
-                    <input type="submit" class="btn btn-outline-primary">
-                    <br><br>
+        <div class="ParticipationEnchere">
 
 
-                    <span class="barreIndic">_________</span>
+            <form action="../actions/ActionsParticipation.php" method="post">
+                <div class="form-group">
+                    <label  for="user"><p class="nomVente">Entrez un prix</label>
 
-                </form>
-            </div>
+                    <input alt="prixPropose" name="prixPropose" id="user" type="number" required>  €
+
+                    <input alt="idClient" name="idClient" id="user" type="hidden" value="<?php echo $_SESSION["idClient"] ?>">
+
+                    <input alt="TopPrice" name="TopPrice" id="user" type="hidden"
+                           value="<?php echo $lignes[0]["TopPrix"] ?>">
+
+                    <input alt="id" name="idObjet" id="user" type="hidden" value="<?php echo $id ?>">
+
+                </div>
+
+                <input type="submit" class="btn btn-outline-primary">
+
+            </form>
+
+
+
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+            <script>
+                $(document).ready(function () {
+                    setInterval(function () {
+                        $(".Indic").load('../MainStonks/BarreRefresh.php?id=<?php echo $id?>')
+                    }, 1000);
+                });
+            </script>
+
         </div>
+        <p class="Indic">-----------</p>
+    </div>
 
-        <?php
-    }
-
-    ?>
 
 </div>
 </html>

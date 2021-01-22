@@ -187,4 +187,11 @@ footer span {
         text-shadow: 0 0 10px #e77d14,
         0 0 20px #e77d14;
     }
+    .ezze {
+        top: 40%;
+        right: 80%;
+        color: #b9b9ba;
+        text-shadow: 0 0 10px #ffffff;
+        transform: translateX(200px);
+    }
 }

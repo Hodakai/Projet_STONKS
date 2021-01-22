@@ -20,6 +20,7 @@ function mon_footer($login)
         <div class="footer">
             <span>Axel Baudoin / Thomas Gravy</span>
             <span>Projet BGC</span>
+            <a href="../actions/deconnexion.php" class="btn btn-sm btn-primary">Déconnexion</a>
         </div>
     </footer>
     </html>
